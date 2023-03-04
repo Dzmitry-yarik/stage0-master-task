@@ -1,7 +1,8 @@
 package com.epam.OOP;
 
-public class Bird {
-  public Bird() {
+
+public class Bird extends Animals {
+    public Bird() {
         super("blue", 2, false);
     }
 
