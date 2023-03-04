@@ -1,11 +1,12 @@
 package com.epam.OOP;
 
 public class Animal {
+
    private String color;
    private int numberOfPaws;
    private boolean hasFur;
 
-    public Animals(String color, int numberOfPaws, boolean hasFur) {
+    public Animal(String color, int numberOfPaws, boolean hasFur) {
         this.color = color;
         this.numberOfPaws = numberOfPaws;
         this.hasFur = hasFur;
@@ -50,17 +51,5 @@ public class Animal {
         }
         return paws;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Animals animals = (Animals) o;
-        return numberOfPaws == animals.numberOfPaws && hasFur == animals.hasFur && Objects.equals(color, animals.color);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(color, numberOfPaws, hasFur);
-    }
 }
+
