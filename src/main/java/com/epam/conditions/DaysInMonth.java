@@ -1,31 +1,34 @@
 package com.epam.conditions;
 
 public class DaysInMonth {
-//    public static void main(String []args){
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter desired year: ");
-//        int year = scanner.nextInt();
-//        System.out.println("Enter desired month: ");
-//        int month = scanner.nextInt();
-//    }
 
     public void printDays(int year, int month) {
-        Scanner scn = new Scanner(System.in);
-        while (month > 12) {
-            System.out.println("Wrong month!!!");
-            System.out.println("Enter another month: ");
-            month = scn.nextInt();
-            if (month < 12) break;
+        if (month <= 0 || month > 12){
+            return;
         }
-        Calendar myCalendar = (Calendar) Calendar.getInstance().clone();
-        myCalendar.set(year, month, 0);
-        int max_date = myCalendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-        System.out.println("Number of days in " + month + " month " + year + " year - " + max_date);
-        myCalendar.set(year, 2, 0);
-        int leap = myCalendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-        if (leap == 29)
-            System.out.println("Leap yea");
-        else
-            System.out.println("Not a leap yea");
+        switch(month)
+        {case 1: System.out.println("31");break;
+            case 2:  if (year %100==0 && year %400 ==0 )
+                System.out.println("29");
+
+            else if (year % 4 == 0 && year % 100 > 0)
+                System.out.println("29");
+
+            else if (year % 100 == 0)
+                System.out.println("28");
+
+            else
+                System.out.println("28");
+               break;
+            case 3: System.out.println("31");break;
+            case 4: System.out.println("30");break;
+            case 5: System.out.println("31");break;
+            case 6: System.out.println("30");break;
+            case 7: System.out.println("31");break;
+            case 8: System.out.println("31");break;
+            case 9: System.out.println("30");break;
+            case 10: System.out.println("31");break;
+            case 11: System.out.println("30");break;
+            case 12: System.out.println("31");break;}
     }
 }
