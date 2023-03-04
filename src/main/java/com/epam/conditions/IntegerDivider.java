@@ -2,8 +2,8 @@ package com.epam.conditions;
 
 public class IntegerDivider {
 
-    public static void printCompletelyDivided(int dividend, int divider) {
-//        Scanner scn = new Scanner(System.in);
+    public void printCompletelyDivided(int dividend, int divider) {
+
         int result, res;
         while (divider == 0) {
             System.out.println("division by zero");
