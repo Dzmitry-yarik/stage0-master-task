@@ -6,8 +6,8 @@ package com.epam.algorithms;
  * The usage of any additional packages (such as java.util.*) is forbidden.
  */
 public class ArrayTasks {
-
-    public String[] seasonsArray() {
+    
+public String[] seasonsArray() {
         String[] seasons = new String[]{"Winter", "Spring", "Summer", "Autumn"};
         for (int i = 0; i < seasons.length; i++) {
             System.out.println(seasons[i]);
@@ -15,8 +15,8 @@ public class ArrayTasks {
         return seasons;
     }
 
-    public int[] generateNumbers() {
-        int[] num = new int[5];
+    public int[] generateNumbers(int a) {
+        int[] num = new int[a];
         for (int i = 0; i < num.length; i++) {
             num[i] = i + 1;
             System.out.print(num[i] + " ");
@@ -30,7 +30,7 @@ public class ArrayTasks {
         for (int i = 0; i < arr.length; i++) {
             sum = arr[i] + sum;
         }
-        System.out.println("Sum = " +sum);
+        System.out.println("Sum = " + sum);
         return sum;
     }
 
@@ -45,20 +45,18 @@ public class ArrayTasks {
         return b;
     }
 
-    public String[] reverseArray(){
-        String[] seasons = new String[]{"Winter", "Spring", "Summer", "Autumn"};
+    public String[] reverseArray(String[] seasons) {
         int a = 0;
         String[] newSeasons = new String[seasons.length];
-        for (int i = seasons.length-1; 0 <= i; i--) {
-            System.out.println(seasons[i] + " ");
-            newSeasons[a]  = seasons[i];
+        for (int i = seasons.length - 1; 0 <= i; i--) {
+            System.out.print(seasons[i] + " ");
+            newSeasons[a] = seasons[i];
             a++;
         }
         return newSeasons;
     }
 
-    public int[] getOnlyPositiveNumbers() {
-        int[] arr = {-5, 2, 0};
+    public int[] getOnlyPositiveNumbers(int[] arr) {
         int a = 0;
         int b = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -80,8 +78,8 @@ public class ArrayTasks {
         int[] arr1 = array[0];
         int[] arr2 = array[1];
         for (int i = 0; i < arr1.length - 1; i++) {
-            for(int j = 0; j < arr1.length - i - 1; j++) {
-                if(arr1[j + 1] < arr1[j]) {
+            for (int j = 0; j < arr1.length - i - 1; j++) {
+                if (arr1[j + 1] < arr1[j]) {
                     int swap = arr1[j];
                     arr1[j] = arr1[j + 1];
                     arr1[j + 1] = swap;
@@ -89,19 +87,19 @@ public class ArrayTasks {
             }
         }
         for (int i = 0; i < arr2.length - 1; i++) {
-            for(int j = 0; j < arr2.length - i - 1; j++) {
-                if(arr2[j + 1] < arr2[j]) {
+            for (int j = 0; j < arr2.length - i - 1; j++) {
+                if (arr2[j + 1] < arr2[j]) {
                     int swap = arr2[j];
                     arr2[j] = arr2[j + 1];
                     arr2[j + 1] = swap;
                 }
             }
         }
-        int[][] arrayNew= {arr1,arr2};
-        if (arr1.length > arr2.length){
+        int[][] arrayNew = {arr1, arr2};
+        if (arr1.length > arr2.length) {
             int[] tmp = arrayNew[1];
-            arrayNew[1]=arrayNew[0];
-            arrayNew[0]=tmp;
+            arrayNew[1] = arrayNew[0];
+            arrayNew[0] = tmp;
         }
         return arrayNew;
     }
