@@ -1,24 +1,13 @@
 package com.epam.conditions;
 
-import java.util.Scanner;
-
 public class IntegerDivider {
-    //    public static void main(String[] args) {
+
+    public static void printCompletelyDivided(int dividend, int divider) {
 //        Scanner scn = new Scanner(System.in);
-//        int first, second, result, res;
-//        System.out.println("Enter the dividend: ");
-//        first = scn.nextInt();
-//        System.out.println("Enter the divider: ");
-//        second = scn.nextInt();
-//    }
-    public void printCompletelyDivided(int dividend, int divider) {
-        Scanner scn = new Scanner(System.in);
         int result, res;
         while (divider == 0) {
-            System.out.println("division by zero!!!");
-            System.out.println("Enter another divider: ");
-            divider = scn.nextInt();
-            if (divider > 0) break;
+            System.out.println("division by zero");
+                return;
         }
         result = dividend / divider;
         res = result * divider;
@@ -28,3 +17,4 @@ public class IntegerDivider {
             System.out.println("cannot be divided completely");
     }
 }
+
