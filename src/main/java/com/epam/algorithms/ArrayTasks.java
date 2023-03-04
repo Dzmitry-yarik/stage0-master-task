@@ -6,53 +6,8 @@ package com.epam.algorithms;
  * The usage of any additional packages (such as java.util.*) is forbidden.
  */
 public class ArrayTasks {
-    public static void main(String[] args) {
 
-        int[] arr = {5, -3, 4, -4, 4, 3};
-        String[] seasons = new String[]{"Winter", "Spring", "Summer", "Autumn"};
-        int[][] array = {{1, -4, 6}, {2, -4}};
-
-        seasonsArray();
-//        for (String element: seasonsArray()) {
-//            System.out.println(element);
-//        }
-        System.out.println("*************************************************************");
-
-        generateNumbers();
-//        for (int element: generateNumbers()) {
-//            System.out.println(element);
-//        }
-        System.out.println("*************************************************************");
-
-        totalSum(arr);
-        System.out.println("*************************************************************");
-
-        System.out.println(findIndexOfNumber(arr, -13));
-        System.out.println("*************************************************************");
-
-        reverseArray();
-//        for (String element: reverseArray()) {
-//            System.out.print(element + " ");
-//        }
-        System.out.println("*************************************************************");
-
-//        getOnlyPositiveNumbers();
-        for (int element: getOnlyPositiveNumbers()) {
-            System.out.println(element + " ");
-        }
-        System.out.println("*************************************************************");
-
-//        sortRaggedArray(array);
-        for (int i = 0; i < sortRaggedArray(array).length; i++) {
-            int [] ints = sortRaggedArray(array)[i];
-            for (int j = 0; j < ints.length; j++) {
-                System.out.print(sortRaggedArray(array)[i][j] + "  ");
-            }
-            System.out.println(" ");
-        }
-    }
-
-    public static String[] seasonsArray() {
+    public String[] seasonsArray() {
         String[] seasons = new String[]{"Winter", "Spring", "Summer", "Autumn"};
         for (int i = 0; i < seasons.length; i++) {
             System.out.println(seasons[i]);
@@ -60,7 +15,7 @@ public class ArrayTasks {
         return seasons;
     }
 
-    public static int[] generateNumbers() {
+    public int[] generateNumbers() {
         int[] num = new int[5];
         for (int i = 0; i < num.length; i++) {
             num[i] = i + 1;
@@ -70,7 +25,7 @@ public class ArrayTasks {
         return num;
     }
 
-    public static int totalSum(int[] arr) {
+    public int totalSum(int[] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             sum = arr[i] + sum;
@@ -79,7 +34,7 @@ public class ArrayTasks {
         return sum;
     }
 
-    public static int findIndexOfNumber(int[] arr, int number) {
+    public int findIndexOfNumber(int[] arr, int number) {
         int b = -1;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == number) {
@@ -90,7 +45,7 @@ public class ArrayTasks {
         return b;
     }
 
-    public static String[] reverseArray(){
+    public String[] reverseArray(){
         String[] seasons = new String[]{"Winter", "Spring", "Summer", "Autumn"};
         int a = 0;
         String[] newSeasons = new String[seasons.length];
@@ -102,7 +57,7 @@ public class ArrayTasks {
         return newSeasons;
     }
 
-    public static int[] getOnlyPositiveNumbers() {
+    public int[] getOnlyPositiveNumbers() {
         int[] arr = {-5, 2, 0};
         int a = 0;
         int b = 0;
@@ -121,7 +76,7 @@ public class ArrayTasks {
         return newArr;
     }
 
-    public static int[][] sortRaggedArray(int[][] array) {
+    public int[][] sortRaggedArray(int[][] array) {
         int[] arr1 = array[0];
         int[] arr2 = array[1];
         for (int i = 0; i < arr1.length - 1; i++) {
