@@ -1,5 +1,7 @@
 package com.epam.conditions;
 
+public class DaysInMonth {
+
     public void printDays(int year, int month) {
         if (month <= 0 || month > 12) {
             System.err.println("invalid date");
