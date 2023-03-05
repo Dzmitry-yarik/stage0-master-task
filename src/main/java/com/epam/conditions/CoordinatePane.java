@@ -4,16 +4,16 @@ public class CoordinatePane {
 
         public void printQuadrant(int x, int y) {
         if (x == 0 && y == 0)
-            System.err.print("zero");
+            System.out.print("zero");
         else if (x == 0 || y == 0)
-            System.err.print("Coordinates belong to two quarters at the same time");
+            System.out.print("Coordinates belong to two quarters at the same time");
         else if (x >= 0 && y >= 0)
-            System.err.print("first");
+            System.out.print("first");
         else if (x <= 0 && y >= 0)
-            System.err.print("second");
+            System.out.print("second");
         else if (x <= 0 && y <= 0)
-            System.err.print("third");
+            System.out.print("third");
         else if (x >= 0 && y <= 0)
-            System.err.print("fourth");
+            System.out.print("fourth");
     }
 }
