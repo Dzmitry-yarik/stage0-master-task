@@ -73,6 +73,28 @@ public class ArrayTasks {
         }
         return newArr;
     }
+    
+        public int[][] sortRaggedArray(int[][] array) {
+
+        for (int i = 0; i < array.length; i++) {
+            for (int k = 0; k < array[i].length - 1; k++) {
+                for (int j = 0; j < array[i].length - k - 1; j++) {
+                    if (array[i][j + 1] < array[i][j]) {
+                        int swap = array[i][j];
+                        array[i][j] = array[i][j + 1];
+                        array[i][j + 1] = swap;
+                    }
+                }
+            }
+        }
+
+        if (array[0].length > array[1].length) {
+            int[] tmp = array[1];
+            array[1] = array[0];
+            array[0] = tmp;
+        }
+        return array;
+    }
 
 }
 
