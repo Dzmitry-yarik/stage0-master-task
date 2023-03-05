@@ -5,12 +5,12 @@ public class HalfPyramid {
     public void printHalfPyramid(int cathetusLength) {
         for (int i = 0; i < cathetusLength; i++) {
         for (int j = 0; j < cathetusLength - i-1; j++) {
-        System.err.print(" ");
+        System.out.print(" ");
         }
         for (int k = 0; k <= i; k++) {
-        System.err.print("*");
+        System.out.print("*");
         }
-        System.err.println();
+        System.out.println();
         }
     }
 
