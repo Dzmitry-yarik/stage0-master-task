@@ -1,18 +1,19 @@
 package com.epam.conditions;
 
 public class CoordinatePane {
-    public void printQuadrant(int x, int y) {
+
+        public void printQuadrant(int x, int y) {
         if (x == 0 && y == 0)
-            System.out.print("0");
+            System.err.print("zero");
         else if (x == 0 || y == 0)
-            System.out.print("Coordinates belong to two quarters at the same time");
+            System.err.print("Coordinates belong to two quarters at the same time");
         else if (x >= 0 && y >= 0)
-            System.out.print("1");
+            System.err.print("first");
         else if (x <= 0 && y >= 0)
-            System.out.print("2");
+            System.err.print("second");
         else if (x <= 0 && y <= 0)
-            System.out.print("3");
+            System.err.print("third");
         else if (x >= 0 && y <= 0)
-            System.out.print("4");
+            System.err.print("fourth");
     }
 }
