@@ -7,6 +7,7 @@ public class Pyramid {
         for (int i = 1; i <= cathetusLength; i++) {
             x = i - 1;
             for (int j = i; j <= cathetusLength - 1; j++) {
+                System.err.print(" ");
             }
             for (int j = 0; j <= x; j++)
                 System.out.print((i + j) < cathetusLength * 2 ? (i - j)  : (i + j));
