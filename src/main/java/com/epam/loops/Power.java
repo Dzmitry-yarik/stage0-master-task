@@ -7,7 +7,7 @@ public class Power {
         for (int i = 1; i <= power; i++) {
             sum = numberToPrint * sum;
         }
-        System.err.println(sum);
+        System.out.println(sum);
     }
 
     public static void main(String[] args) {
