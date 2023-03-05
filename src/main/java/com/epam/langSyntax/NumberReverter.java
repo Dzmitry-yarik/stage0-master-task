@@ -5,6 +5,6 @@ public class NumberReverter {
     public void revert(int number) {
         StringBuilder stringBuilder = new StringBuilder(String.valueOf(number));
         stringBuilder.reverse();
-        System.err.println(stringBuilder);
+        System.out.println(stringBuilder);
     }
 }
