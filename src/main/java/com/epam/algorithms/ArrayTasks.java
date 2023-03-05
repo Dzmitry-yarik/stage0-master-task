@@ -74,32 +74,32 @@ public class ArrayTasks {
         return newArr;
     }
 
-    public int[][] sortRaggedArray(int[] arr1 ,int[] arr2) {
-        for (int i = 0; i < arr1.length - 1; i++) {
-            for (int j = 0; j < arr1.length - i - 1; j++) {
-                if (arr1[j + 1] < arr1[j]) {
-                    int swap = arr1[j];
-                    arr1[j] = arr1[j + 1];
-                    arr1[j + 1] = swap;
-                }
-            }
-        }
-        for (int i = 0; i < arr2.length - 1; i++) {
-            for (int j = 0; j < arr2.length - i - 1; j++) {
-                if (arr2[j + 1] < arr2[j]) {
-                    int swap = arr2[j];
-                    arr2[j] = arr2[j + 1];
-                    arr2[j + 1] = swap;
-                }
-            }
-        }
-        int[][] arrayNew = {arr1, arr2};
-        if (arr1.length > arr2.length) {
-            int[] tmp = arrayNew[1];
-            arrayNew[1] = arrayNew[0];
-            arrayNew[0] = tmp;
-        }
-        return arrayNew;
-    }
+//     public int[][] sortRaggedArray(int[] arr1 ,int[] arr2) {
+//         for (int i = 0; i < arr1.length - 1; i++) {
+//             for (int j = 0; j < arr1.length - i - 1; j++) {
+//                 if (arr1[j + 1] < arr1[j]) {
+//                     int swap = arr1[j];
+//                     arr1[j] = arr1[j + 1];
+//                     arr1[j + 1] = swap;
+//                 }
+//             }
+//         }
+//         for (int i = 0; i < arr2.length - 1; i++) {
+//             for (int j = 0; j < arr2.length - i - 1; j++) {
+//                 if (arr2[j + 1] < arr2[j]) {
+//                     int swap = arr2[j];
+//                     arr2[j] = arr2[j + 1];
+//                     arr2[j + 1] = swap;
+//                 }
+//             }
+//         }
+//         int[][] arrayNew = {arr1, arr2};
+//         if (arr1.length > arr2.length) {
+//             int[] tmp = arrayNew[1];
+//             arrayNew[1] = arrayNew[0];
+//             arrayNew[0] = tmp;
+//         }
+//         return arrayNew;
+//     }
 }
 
