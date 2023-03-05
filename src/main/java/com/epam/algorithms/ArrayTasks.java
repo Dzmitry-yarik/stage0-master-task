@@ -74,26 +74,48 @@ public class ArrayTasks {
         return newArr;
     }
     
-        public int[][] sortRaggedArray(int[][] array) {
+      public int[][] sortRaggedArray(int[][] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j].length > arr[j + 1].length) {
+                    int[] temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
 
-        for (int i = 0; i < array.length; i++) {
-            for (int k = 0; k < array[i].length - 1; k++) {
-                for (int j = 0; j < array[i].length - k - 1; j++) {
-                    if (array[i][j + 1] < array[i][j]) {
-                        int swap = array[i][j];
-                        array[i][j] = array[i][j + 1];
-                        array[i][j + 1] = swap;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length - 1; j++) {
+                for (int k = 0; k < arr[i].length - j - 1; k++) {
+                    if (arr[i][k] > arr[i][k + 1]) {
+                        int temp = arr[i][k];
+                        arr[i][k] = arr[i][k + 1];
+                        arr[i][k + 1] = temp;
                     }
                 }
             }
         }
 
-        if (array[0].length > array[1].length) {
-            int[] tmp = array[1];
-            array[1] = array[0];
-            array[0] = tmp;
+        System.out.print("[");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("[");
+            for (int j = 0; j < arr[i].length; j++) {
+                if (j != arr[i].length - 1) {
+                    System.out.print(arr[i][j] + ",");
+                } else {
+                    System.out.print(arr[i][j]);
+                }
+            }
+            if (i != arr.length - 1) {
+                System.out.print("], ");
+            } else {
+                System.out.print("]");
+            }
         }
-        return array;
+        System.out.print("]");
+
+        return arr;
     }
 
 }
