@@ -37,19 +37,16 @@ public class Animal {
     }
 
     public void getDescription(){
-        System.out.println("This animal is basically " + color +
+        System.err.println("This animal is basically " + color +
                 ". It has " + numberOfPaws + paws(numberOfPaws) + "and " + hasFur + " fur.");
     }
     public String paws(int paw) {
         String paws;
-        switch (paw) {
-            case 1:
-                paws = " paw ";
-                break;
-            default:
-                paws = " paws ";
+        if (paw == 1) {
+            paws = " paw ";
+        } else {
+            paws = " paws ";
         }
         return paws;
     }
 }
-
