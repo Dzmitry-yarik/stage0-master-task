@@ -8,6 +8,6 @@ public class DigitsSumCalculator {
             sum = sum + number % 10;
             number /= 10;
         }
-        System.err.println(sum);
+        System.out.println(sum);
     }
 }
