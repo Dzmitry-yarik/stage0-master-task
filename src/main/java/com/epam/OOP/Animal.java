@@ -36,9 +36,10 @@ public class Animal {
         this.hasFur = hasFur;
     }
 
-    public void getDescription(){
-        System.err.println("This animal is basically " + color +
-                ". It has " + numberOfPaws + paws(numberOfPaws) + "and " + hasFur + " fur.");
+    public String getDescription(){
+        String s = "This animal is basically " + color +
+                ". It has " + numberOfPaws + paws(numberOfPaws) + "and " + hasFur + " fur.";
+        return s;
     }
     public String paws(int paw) {
         String paws;
