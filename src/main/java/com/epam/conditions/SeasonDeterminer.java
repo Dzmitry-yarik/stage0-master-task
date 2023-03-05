@@ -10,7 +10,7 @@ public class SeasonDeterminer {
             case 9, 10, 11 -> "Autumn";
             default -> "Wrong month number";
         };
-        System.err.println(season);
+        System.out.println(season);
     }
 }
 
