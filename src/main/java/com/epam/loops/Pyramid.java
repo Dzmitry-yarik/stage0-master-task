@@ -3,7 +3,9 @@ package com.epam.loops;
 public class Pyramid {
 
     public void printPyramid(int cathetusLength) {
+       
         int x;
+        System.out.print("   ");
         for (int i = 1; i <= cathetusLength; i++) {
             System.err.print(" ");
             x = i - 1;
