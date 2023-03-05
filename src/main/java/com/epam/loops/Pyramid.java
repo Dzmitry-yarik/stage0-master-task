@@ -1,5 +1,7 @@
 package com.epam.loops;
 
+public class Pyramid {
+
     public void printPyramid(int cathetusLength) {
         int x;
         for (int i = 1; i <= cathetusLength; i++) {
