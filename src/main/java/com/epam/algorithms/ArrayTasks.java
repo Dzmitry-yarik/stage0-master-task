@@ -7,10 +7,10 @@ package com.epam.algorithms;
  */
 public class ArrayTasks {
     
-public String[] seasonsArray() {
+    public String[] seasonsArray() {
         String[] seasons = new String[]{"Winter", "Spring", "Summer", "Autumn"};
         for (int i = 0; i < seasons.length; i++) {
-            System.out.println(seasons[i]);
+            System.err.println(seasons[i]);
         }
         return seasons;
     }
@@ -19,9 +19,9 @@ public String[] seasonsArray() {
         int[] num = new int[a];
         for (int i = 0; i < num.length; i++) {
             num[i] = i + 1;
-            System.out.print(num[i] + " ");
+            System.err.print(num[i] + " ");
         }
-        System.out.println();
+        System.err.println();
         return num;
     }
 
@@ -30,7 +30,7 @@ public String[] seasonsArray() {
         for (int i = 0; i < arr.length; i++) {
             sum = arr[i] + sum;
         }
-        System.out.println("Sum = " + sum);
+        System.err.println("Sum = " + sum);
         return sum;
     }
 
@@ -49,7 +49,7 @@ public String[] seasonsArray() {
         int a = 0;
         String[] newSeasons = new String[seasons.length];
         for (int i = seasons.length - 1; 0 <= i; i--) {
-            System.out.print(seasons[i] + " ");
+            System.err.println(seasons[i] + " ");
             newSeasons[a] = seasons[i];
             a++;
         }
@@ -74,9 +74,7 @@ public String[] seasonsArray() {
         return newArr;
     }
 
-    public int[][] sortRaggedArray(int[][] array) {
-        int[] arr1 = array[0];
-        int[] arr2 = array[1];
+    public int[][] sortRaggedArray(int[] arr1 ,int[] arr2) {
         for (int i = 0; i < arr1.length - 1; i++) {
             for (int j = 0; j < arr1.length - i - 1; j++) {
                 if (arr1[j + 1] < arr1[j]) {
@@ -104,3 +102,4 @@ public String[] seasonsArray() {
         return arrayNew;
     }
 }
+
