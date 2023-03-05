@@ -37,8 +37,8 @@ public class Animal {
     }
 
     public String getDescription(){
-        String s = "This animal is basically " + color +
-                ". It has " + numberOfPaws + paws(numberOfPaws) + "and " + hasFur + " fur.";
+        String s = "This animal is mostly " + color +
+                ". It has " + numberOfPaws + paws(numberOfPaws) + "and a fur.";
         return s;
     }
     public String paws(int paw) {
